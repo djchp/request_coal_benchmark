@@ -1,0 +1,5 @@
+CREATE KEYSPACE messages_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
+
+USE messages_keypsace;
+
+CREATE TABLE messages ( id uuid PRIMARY KEY, content text, read boolean);
